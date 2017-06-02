@@ -1,3 +1,12 @@
-<h1>
-  {{title}}
-</h1>
+
+<div class="container-fluid">
+  <app-header></app-header>
+  <app-player-amount *ngIf="!appPlayerAmount"></app-player-amount>
+  <app-player-score *ngIf="playerAmount >= 1 && appPlayerAmount == true;" id="1"></app-player-score>
+  <app-player-two-score *ngIf="playerAmount >= 2 && appPlayerAmount == true;"></app-player-two-score>
+  <app-player-three-score *ngIf="playerAmount >= 3 && appPlayerAmount == true;"></app-player-three-score>
+  <app-player-four-score *ngIf="playerAmount >= 4 && appPlayerAmount == true;"></app-player-four-score>
+  <app-player-five-score *ngIf="playerAmount >= 5 && appPlayerAmount == true;"></app-player-five-score>
+  <app-player-six-score *ngIf="playerAmount >= 6 && appPlayerAmount == true;"></app-player-six-score>
+  <app-footer></app-footer>
+</div>
